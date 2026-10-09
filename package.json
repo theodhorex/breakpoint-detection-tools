@@ -17,5 +17,11 @@
     "playwright"
   ],
   "author": "Aurelio Theodhore Riyanto",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "playwright": "^1.64.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
 }
