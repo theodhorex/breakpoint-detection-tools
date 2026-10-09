@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Uji Responsif dengan Cacat Sengaja (Ground Truth)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f5f9;
+      color: #334155;
+    }
+
+    header {
+      background: #1e293b;
+      color: white;
+      padding: 24px;
+      text-align: center;
+    }
+
+    /* NORMAL DESKTOP HEADING */
+    h1 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    /* CACAT TIPOGRAFI 1: Line-height collapse (teks berhimpitan) */
+    .hero-subtitle {
+      font-size: 24px;
+      line-height: 14px; /* Rusak: line-height < font-size */
+      color: #94a3b8;
+      margin-bottom: 20px;
+    }
+
+    /* CACAT JARAK 1: Fixed margin trap pada mobile */
+    .fixed-margin-container {
+      margin: 20px 90px; /* 180px total margin horizontal, melumpuhkan layar 320px */
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    /* CACAT TIPOGRAFI 2: Inversi Hierarki Heading pada Mobile */
+    h2.sub-title {
+      font-size: 24px;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    /* CACAT OVERFLOW (WCAG 2.1 Reflow): Banner lebar statis 480px */
+    .oversized-card {
+      min-width: 480px; /* Meluap di 320px */
+      background: #fee2e2;
+      border: 2px solid #ef4444;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
+    /* CACAT TIPOGRAFI 3: Font terlalu kecil pada mobile */
+    .tiny-text {
+      font-size: 10px; /* Terlalu kecil (< 12px) */
+      color: #64748b;
+      margin-top: 15px;
+    }
+
+    /* Media query yang sengaja salah (membuat H2 lebih besar dari H1 di mobile) */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 18px; /* H1 mengecil jadi 18px */
+      }
+      h2.sub-title {
+        font-size: 26px; /* H2 justru membesar jadi 26px -> Inversi Hierarki! */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="main-title">Aplikasi Web Toko Kampus</h1>
+    <p class="hero-subtitle" id="hero-sub">Penyedia kebutuhan civitas akademika terlengkap</p>
+  </header>
+
+  <main class="fixed-margin-container" id="content-container">
+    <h2 class="sub-title" id="section-heading">Katalog Produk Terpopuler</h2>
+    <p>Di bawah ini adalah kartu penawaran spesial minggu ini.</p>
+
+    <!-- Kartu dengan min-width 480px yang memicu overflow horizontal di 320px -->
+    <div class="oversized-card" id="promo-banner">
+      <h3>Promo Laptop Mahasiswa Informatika</h3>
+      <p>Diskon khusus dengan menunjukkan kartu tanda mahasiswa aktif UKDW.</p>
+    </div>
+
+    <p class="tiny-text" id="terms-notice">
+      *Syarat dan ketentuan berlaku. Promo dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya.
+    </p>
+  </main>
+</body>
+</html>
