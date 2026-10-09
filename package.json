@@ -16,7 +16,7 @@
     "computed-style",
     "playwright"
   ],
-  "author": "Aurelio Theodhore Riyanto",
+  "author": "theodhorex <theodhore76@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^26.6.4",
