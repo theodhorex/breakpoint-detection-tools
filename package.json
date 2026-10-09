@@ -1,0 +1,21 @@
+{
+  "name": "breakpoint-detection-tools",
+  "version": "0.1.0",
+  "description": "Aplikasi Web Pemeriksa Konsistensi Desain Antarmuka Responsif pada Berbagai Breakpoint",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "audit:demo": "tsx src/index.ts --file samples/demo-responsive-flaws.html",
+    "test": "tsx src/index.ts --file samples/demo-responsive-flaws.html"
+  },
+  "keywords": [
+    "responsive-design",
+    "breakpoint-checker",
+    "wcag-reflow",
+    "computed-style",
+    "playwright"
+  ],
+  "author": "Aurelio Theodhore Riyanto",
+  "license": "MIT"
+}
