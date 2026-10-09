@@ -1,7 +1,8 @@
 # Breakpoint Inconsistency Detection Tools
 
 Aplikasi Web Pemeriksa Konsistensi Desain Antarmuka Responsif pada Berbagai Breakpoint.  
-*Proyek Tugas Akhir Skripsi - Program Studi Informatika, Universitas Kristen Duta Wacana (UKDW)*
+*Proyek Tugas Akhir Skripsi - Program Studi Informatika, Universitas Kristen Duta Wacana (UKDW)*  
+**Author**: [@theodhorex](https://github.com/theodhorex) (Aurelio Theodhore Riyanto)
 
 ---
 
